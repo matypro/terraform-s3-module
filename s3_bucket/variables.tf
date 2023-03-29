@@ -19,13 +19,13 @@ variable "login-prefix" {
 }
 
 ## Variable is optional 
-variable "Name" {
+variable "tag_name" {
   description = "Bucket name - must be globally unique"
   type        = string
 }
 
 ## Variable is optional 
-variable "Environment" {
+variable "tag_env" {
   description = "route to save logs."
   type        = string
   default     = "acc"
