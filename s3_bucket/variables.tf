@@ -11,3 +11,9 @@ variable "versioning" {
   default     = false
 }
 
+## Variable is optional 
+variable "login-prefix" {
+  description = "route to save logs."
+  type        = string
+}
+
