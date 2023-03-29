@@ -32,7 +32,7 @@ resource "aws_s3_bucket_public_access_block" "block_public" {
 }
 
 resource "aws_s3_bucket_logging" "example-login" {
-  bucket = aws_s3_bucket.example.id
+  bucket = aws_s3_bucket.my_bucket.id
 
   target_bucket = aws_s3_bucket.my_bucket.id
   target_prefix = var.login-prefix
