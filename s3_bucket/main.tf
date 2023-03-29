@@ -31,4 +31,9 @@ resource "aws_s3_bucket_public_access_block" "block_public" {
   restrict_public_buckets = true
 }
 
+resource "aws_s3_bucket_logging" "example-login" {
+  bucket = aws_s3_bucket.example.id
 
+  target_bucket = aws_s3_bucket.my_bucket.id
+  login-prefix = var.login-prefix
+}
